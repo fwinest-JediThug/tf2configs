@@ -349,13 +349,13 @@ cl_forcepreload 1 // Force preloading
 cl_show_splashes 0
 mat_fastspecular 1
 mat_mipmaptextures 0
-r_WaterDrawRefraction 0
-r_decal_cullsize 10 
+//r_WaterDrawRefraction 0
+//r_decal_cullsize 10 
 r_maxdlights 0
 r_PhysPropStaticLighting 0
-r_renderoverlayfragment 0
+//r_renderoverlayfragment 0
 r_worldlights 0
-mat_picmip 2
+//mat_picmip 2
 
 // ----------------------------------------------------------------------------
 // Print to console
