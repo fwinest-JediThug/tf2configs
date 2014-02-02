@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 // Chris' competitive medic config
-// v1.056 | 05 August 2011 | fakkelbrigade.eu/chris/configs/
+// v1.056a | 02 February 2014 | fakkelbrigade.eu/chris/configs/ | https://github.com/fwinest-JediThug/tf2configs/
 // ----------------------------------------------------------------------------
 // Problems or questions? Contact me at #christf2 on QuakeNet.
 // ----------------------------------------------------------------------------
@@ -26,7 +26,7 @@
 // (You might want to put it in your autoexec as well, because binds are
 // retained between sessions)
 //
-// alias "resetmedcfg" "unbind "shift";bind "mouse1" "+attack";bind "mouse2" "+attack2";bind "mwheelup" "invprev";bind "mwheeldown" "invnext";unbind "mouse3";unbind "mouse4";bind "C" "voice_menu_3";-forward;echo "*** MEDIC CONFIG UNLOADED ***""
+// alias "resetmedcfg" "unbind "shift";bind "mouse1" "+attack";bind "mouse2" "+attack2";bind "mwheelup" "invprev";bind "mwheeldown" "invnext";unbind "mouse3";unbind "mouse4";bind "C" "voice_menu_3";-forward; tf_remember_activeweapon 0;echo "*** MEDIC CONFIG UNLOADED ***""
 // resetmedcfg
 //
 // OR
@@ -55,8 +55,8 @@ alias -autocall_temp_hit "autocall_initial"
 // ----------------------------------------------------------------------------
 // Weapon aliases
 // ----------------------------------------------------------------------------
-alias +heal "slot2;+attack;autocall_initial"
-alias -heal "-attack"
+alias +heal "slot2;-attack;autocall_initial"
+alias -heal "+attack"
 alias +needles "slot1;+attack;autocall_temp"
 alias -needles "-attack"
 alias +saw "slot3;+attack;autocall_temp"
@@ -65,7 +65,7 @@ alias -saw "-attack"
 // ----------------------------------------------------------------------------
 // Ubercharge
 // ----------------------------------------------------------------------------
-alias +charge "+attack2;slot2;dropitem;say_team "*** CHARGE USED ***";voicemenu 0 0;autocall_initial"
+alias +charge "+attack; +attack2;slot2;dropitem;say_team "*** CHARGE USED ***";voicemenu 0 0;autocall_initial"
 alias -charge "-attack2"
 
 // ----------------------------------------------------------------------------
@@ -94,6 +94,11 @@ alias forwardspawn_random "join_class "random";alias "forwardspawn_toggle" "forw
 alias forwardspawn_medic "join_class "medic";alias "forwardspawn_toggle" "forwardspawn_random";say_team "*** MOVED SPAWN ***""
 alias forwardspawn_toggle "forwardspawn_random"
 
+alias weapon1 "slot1; -attack; bind MWHEELUP weapon3; bind MWHEELDOWN weapon2; dotxhaircolor"
+alias weapon2 "slot2; +attack; bind MWHEELUP weapon1; bind MWHEELDOWN weapon3; dotxhaircolor"
+alias weapon3 "slot3; -attack; bind MWHEELUP weapon2; bind MWHEELDOWN weapon1; dotxhaircolor"
+weapon1
+
 // ----------------------------------------------------------------------------
 // Binding
 // ----------------------------------------------------------------------------
@@ -109,6 +114,11 @@ bind mouse2 "+needles"
 bind mouse3 "+saw"
 bind mouse4 "+charge"
 bind shift "+shiftmask"
+
+// ----------------------------------------------------------------------------
+// Misc. settings
+// ----------------------------------------------------------------------------
+tf_remember_activeweapon 1
 
 // Print to console
 echo "*** CHRIS' COMPETITIVE MEDIC CONFIG LOADED ***"
