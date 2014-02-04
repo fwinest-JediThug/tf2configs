@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
-// Chris' competitive medic config
-// v1.056a | 02 February 2014 | fakkelbrigade.eu/chris/configs/ | https://github.com/fwinest-JediThug/tf2configs/
+// JediThug's Chris' competitive medic config
+// v1.056b | 04 February 2014 | fakkelbrigade.eu/chris/configs/ | https://github.com/fwinest-JediThug/tf2configs/
 // ----------------------------------------------------------------------------
 // Problems or questions? Contact me at #christf2 on QuakeNet.
 // ----------------------------------------------------------------------------
@@ -55,18 +55,18 @@ alias -autocall_temp_hit "autocall_initial"
 // ----------------------------------------------------------------------------
 // Weapon aliases
 // ----------------------------------------------------------------------------
-alias +heal "slot2;-attack;autocall_initial"
-alias -heal "+attack"
-alias +needles "slot1;+attack;autocall_temp"
-alias -needles "-attack"
-alias +saw "slot3;+attack;autocall_temp"
-alias -saw "-attack"
+alias +heal "slot2;-attack;autocall_initial; dotxhaircolor"
+alias -heal "+attack; dotxhaircolor"
+alias +needles "slot1;+attack;autocall_temp; dotxhaircolor"
+alias -needles "-attack; dotxhaircolor"
+alias +saw "slot3;+attack;autocall_temp; dotxhaircolor"
+alias -saw "-attack; dotxhaircolor"
 
 // ----------------------------------------------------------------------------
 // Ubercharge
 // ----------------------------------------------------------------------------
-alias +charge "+attack; +attack2;slot2;dropitem;say_team "*** CHARGE USED ***";voicemenu 0 0;autocall_initial"
-alias -charge "-attack2"
+alias +charge "+attack; +attack2;slot2;dropitem;say_team "*** CHARGE USED ***";voicemenu 0 0;autocall_initial; dotxhaircolor"
+alias -charge "-attack2; dotxhaircolor"
 
 // ----------------------------------------------------------------------------
 // Fake ubercharge
@@ -94,9 +94,12 @@ alias forwardspawn_random "join_class "random";alias "forwardspawn_toggle" "forw
 alias forwardspawn_medic "join_class "medic";alias "forwardspawn_toggle" "forwardspawn_random";say_team "*** MOVED SPAWN ***""
 alias forwardspawn_toggle "forwardspawn_random"
 
-alias weapon1 "slot1; -attack; bind MWHEELUP weapon3; bind MWHEELDOWN weapon2; dotxhaircolor"
-alias weapon2 "slot2; +attack; bind MWHEELUP weapon1; bind MWHEELDOWN weapon3; dotxhaircolor"
-alias weapon3 "slot3; -attack; bind MWHEELUP weapon2; bind MWHEELDOWN weapon1; dotxhaircolor"
+// ----------------------------------------------------------------------------
+// Weapon switching
+// ----------------------------------------------------------------------------
+alias weapon1 "slot1; -attack; bind MWHEELUP weapon3; bind MWHEELDOWN weapon2; autocall_temp; dotxhaircolor"
+alias weapon2 "slot2; +attack; bind MWHEELUP weapon1; bind MWHEELDOWN weapon3; autocall_initial; dotxhaircolor"
+alias weapon3 "slot3; -attack; bind MWHEELUP weapon2; bind MWHEELDOWN weapon1; autocall_temp; dotxhaircolor"
 weapon1
 
 // ----------------------------------------------------------------------------
