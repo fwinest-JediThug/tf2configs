@@ -209,6 +209,8 @@ mat_monitorgamma 2.0 // Controls brightness, try 1.8 to make it brighter or 2.2
                      // to get it darker. Only works in fullscreen.
 mat_motion_blur_enabled 0
 mat_parallaxmap 0
+mat_phong 0 // Creates a 'shine' effect on players at the expense of performance
+            // designed to make players spot out more when playing
 mat_picmip 1 // Higher = more mipmapping. Without `sv_cheats 1', you're looking
              // at a range from -1 to 2, -1 being the best quality, 2 being the
              // worst.
