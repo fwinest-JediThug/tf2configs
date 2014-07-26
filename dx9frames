@@ -328,7 +328,7 @@ mat_queue_mode 2 // mat_queue mode is another frequently asked about cvar, it
                  // not `-1'. If you intend to do work with the demo system,
                  // maybe you should change this.
 
-cl_threaded_bone_setup 0
+cl_threaded_bone_setup 1
 cl_threaded_client_leaf_system 0
 r_queued_decals 0
 r_queued_ropes 1
