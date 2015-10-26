@@ -12,14 +12,14 @@ EOF
 fi
 
 
-steamUsername="$1"
-config="$2"
-outputFile="$3"
+#steamUsername="$1"
+config="$1"
+outputFile="$2"
 configURL="https://raw.github.com/cdown/tf2configs/master/$config"
 
 if [ -z "$outputFile" ]; then
-    outputDir="$HOME/.local/share/Steam/SteamApps/$steamUsername/Team Fortress 2/tf/cfg"
-    [ -d "$outputDir" ] || outputDir="$HOME/Steam/SteamApps/$steamUsername/Team Fortress 2/tf/cfg"
+    outputDir="$HOME/.local/share/Steam/SteamApps/common/Team Fortress 2/tf/custom/tf2configs/cfg"
+    [ -d "$outputDir" ] || outputDir="$HOME/Steam/SteamApps/common/Team Fortress 2/tf/custom/tf2configs/cfg"
     mkdir -p "$outputDir"
     outputFile="$outputDir/$filename"
 fi
@@ -40,4 +40,4 @@ Add the following to your TF2 launch options (Library -> TF2 -> Properties -> La
 NOTE: Replace WIDTH and HEIGHT as appropriate.
 
 EOF
-awk '$3=="-dxlevel" { sub(/-dxlevel [[:digit:]]+/, "") ; sub(/^\/\/ /, "") ; print } ' < "$outputFile"
+awk '$2=="-dxlevel" { sub(/-dxlevel [[:digit:]]+/, "") ; sub(/^\/\/ /, "") ; print } ' < "$outputFile"
