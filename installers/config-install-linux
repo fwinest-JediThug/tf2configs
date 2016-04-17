@@ -15,7 +15,7 @@ fi
 #steamUsername="$1"
 config="$1"
 outputFile="$2"
-configURL="https://raw.github.com/cdown/tf2configs/master/$config"
+configURL="https://raw.githubusercontent.com/fwinest-JediThug/tf2configs/master/$config"
 
 if [ -z "$outputFile" ]; then
     outputDir="$HOME/.local/share/Steam/SteamApps/common/Team Fortress 2/tf/custom/tf2configs/cfg"
